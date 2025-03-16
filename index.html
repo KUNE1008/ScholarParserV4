@@ -48493,6 +48493,15 @@
     });
   });
 
+  if (sidebarItems.length > 0) {
+    // 激活第一个 sidebarItem
+    sidebarItems[0].classList.add('active');
+    contentItems.forEach(contentItem => {
+      contentItem.classList.add('hidden');
+    });
+    // 显示第一个 contentItem
+    contentItems[0].classList.remove('hidden');
+  }
 </script>
 
 <style>
